@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Visualization System</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cars Visualization System</h1>
+    <div class="main-content">
+        <div id="loading">Loading data...</div>
+        <div id="error" style="display: none;"></div>
+        <div id="visualizations" class="visualization-container">
+            <div class="vis-wrapper">
+                <div class="vis-content">
+                    <h2>MPG vs. Horsepower Scatter Plot</h2>
+                    <div id="scatter1" class="vis"></div>
+                </div>
+            </div>
+            <div class="vis-wrapper">
+                <div class="vis-content">
+                    <h2>Model Year vs. Cylinders Stacked Bar Chart</h2>
+                    <div id="barchart" class="vis"></div>
+                </div>
+            </div>
+            <div class="vis-wrapper">
+                <div class="vis-content">
+                    <h2>MPG Distribution by Origin Box Plot</h2>
+                    <div id="boxplot" class="vis"></div>
+                </div>
+            </div>
+            <div class="vis-wrapper">
+                <div class="vis-content">
+                    <h2>Average MPG Trend by Origin Line Chart</h2>
+                    <div id="linechart" class="vis"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93ac94b949e453d0',t:'MTc0NjQwOTc2Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93b202555ab18978',t:'MTc0NjQ2NjY4MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

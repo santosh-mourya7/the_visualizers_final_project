@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding-top: 60px;
+}
+
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+h2 {
+    color: #333;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1em;
+}
+.visualization-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr) !important;
+    grid-auto-flow: row;
+    gap: 40px;
+    width: 100%;
+    margin-top: 100px;
+    min-height: calc(100vh - 120px);
+    height: auto;
+}
+.vis-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.vis-content {
+    flex: 1;
+    width: 100%;
+}
+.vis {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+}
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    pointer-events: none;
+}
+button, select {
+    padding: 8px 16px;
+    background-color: #808080;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    font-size: 12px;
+}
+button:hover, select:hover {
+    background-color: #666666;
+}
+label {
+    color: #333;
+    font-size: 12px;
+}
+#loading, #error {
+    color: #333;
+    text-align: center;
+    margin-top: 100px;
+}
+#error {
+    color: red;
+}
+.legend {
+    font-size: 12px;
+}
+.legend-item {
+    display: block;
+    margin-bottom: 5px;
+}
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.legend-rect {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.legend-line {
+    width: 20px;
+    height: 2px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.global-controls {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: #e0e0e0;
+    padding: 10px 0;
+    z-index: 900;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style for the brush selection rectangle in the barchart */
+.brush .selection {
+    fill: grey;
+    fill-opacity: 0.3;
+    stroke: grey;
+    stroke-width: 1;
+}
+
+@media (max-width: 768px) {
+    .visualization-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(2, 1fr) !important;
+        gap: 10px;
+    }
+    h2 {
+        font-size: 0.9em;
+    }
+    .vis {
+        padding: 5px;
+        min-height: 150px;
+    }
+    button, select {
+        width: 100px;
+        height: 25px;
+        font-size: 10px;
+    }
+}
